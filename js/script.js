@@ -27,7 +27,7 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
         document.getElementById('mainBalance').innerText = mainBalance
     
         const container = document.createElement('div')
-        container.className = 'border border-gray-700 mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
+        container.className = 'mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
         container.innerHTML=`
         <h1 class='font-bold'> ${value1} Taka is Donated for Famine-2024 at  Noakhali,Bangladesh </h1>
         <p>Donation made on: ${formattedDate}</p>  
@@ -51,7 +51,7 @@ document.getElementById('donate-btn2').addEventListener('click',function(){
      document.getElementById('mainBalance').innerText = mainBalance
     //  add history
     const container = document.createElement('div')
-    container.className = 'border border-gray-700 mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
+    container.className = 'mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
     container.innerHTML=`
     <h1 class='font-bold'> ${value2} Taka is Donated for Famine-2024 at Feni,Bangladesh </h1>
     <p>Donation made on: ${formattedDate}</p>  
@@ -74,14 +74,14 @@ document.getElementById('donate-btn3').addEventListener('click',function(){
         document.getElementById('mainBalance').innerText = mainBalance
         // add history 
         const container = document.createElement('div')
-        container.className = 'border border-gray-700 mx-3 md:mx-10  mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
+        container.className = 'mx-3 md:mx-10  mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
         container.innerHTML=`
         <h1 class='font-bold'> ${value3} Taka Famine 2024 is first for casualties in the fall </h1>
         <p>Donation made on: ${formattedDate}</p>  
         `
         document.getElementById('history-list').append(container)
         my_modal_3.showModal()
-        }else{  
+        }else{   
             alert("invalid Donation Amout")  
         }
         
