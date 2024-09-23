@@ -16,28 +16,35 @@ const formattedDate = currentDate.toLocaleDateString('en-BD', {
 });
 // when click button 1 
 document.getElementById('donate-btn1').addEventListener('click',function(){
+   
     const value1 = getInputFieldId('collect-value1')
-    const moneyReplace = parseFloat(document.getElementById('add-money-1').innerText);
-    value1.value = ''
-    const newBalance = moneyReplace + value1
-    document.getElementById('add-money-1').innerText = newBalance
-    mainBalance = mainBalance -value1
-    document.getElementById('mainBalance').innerText = mainBalance
-
-    const container = document.createElement('div')
-    container.className = 'border border-gray-700 mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
-    container.innerHTML=`
-    <h1 class='font-bold'> ${value1} Taka is Donated for Famine-2024 at  Noakhali,Bangladesh </h1>
-    <p>Donation made on: ${formattedDate}</p>  
-    `
-    document.getElementById('history-list').append(container)
+    if(value1 > 0 || !isNaN){
+        const moneyReplace = parseFloat(document.getElementById('add-money-1').innerText);
+        value1.value = ''
+        const newBalance = moneyReplace + value1
+        document.getElementById('add-money-1').innerText = newBalance
+        mainBalance = mainBalance -value1
+        document.getElementById('mainBalance').innerText = mainBalance
+    
+        const container = document.createElement('div')
+        container.className = 'border border-gray-700 mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
+        container.innerHTML=`
+        <h1 class='font-bold'> ${value1} Taka is Donated for Famine-2024 at  Noakhali,Bangladesh </h1>
+        <p>Donation made on: ${formattedDate}</p>  
+        `
+        document.getElementById('history-list').append(container)
+        my_modal_1.showModal()
+    }else{
+        alert("invalid Donation Amout")
+    }
    
 })
 
 // when click button 2
 document.getElementById('donate-btn2').addEventListener('click',function(){
-    const value2 = getInputFieldId('collect-value2')
-    const moneyReplace = parseFloat(document.getElementById('add-money-2').innerText);
+        const value2 = getInputFieldId('collect-value2')
+        if(value2 > 0 || !isNaN){
+            const moneyReplace = parseFloat(document.getElementById('add-money-2').innerText);
     const newBalance = moneyReplace + value2
     document.getElementById('add-money-2').innerText = newBalance
      mainBalance = mainBalance -value2
@@ -50,23 +57,35 @@ document.getElementById('donate-btn2').addEventListener('click',function(){
     <p>Donation made on: ${formattedDate}</p>  
     `
     document.getElementById('history-list').append(container)
+    my_modal_2.showModal()
+    }else{
+        alert("invalid Donation Amout")
+    }
+    
 })
 // when click button 3
 document.getElementById('donate-btn3').addEventListener('click',function(){
-    const value3 = getInputFieldId('collect-value3')
-    const moneyReplace = parseFloat(document.getElementById('add-money-3').innerText);
-    const newBalance = moneyReplace + value3
-    document.getElementById('add-money-3').innerText = newBalance
-    mainBalance = mainBalance - value3
-    document.getElementById('mainBalance').innerText = mainBalance
-    // add history 
-    const container = document.createElement('div')
-    container.className = 'border border-gray-700 mx-3 md:mx-10  mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
-    container.innerHTML=`
-    <h1 class='font-bold'> ${value3} Taka Famine 2024 is first for casualties in the fall </h1>
-    <p>Donation made on: ${formattedDate}</p>  
-    `
-    document.getElementById('history-list').append(container)
+        const value3 = getInputFieldId('collect-value3')
+        if(value3 > 0 || !isNaN){
+            const moneyReplace = parseFloat(document.getElementById('add-money-3').innerText);
+        const newBalance = moneyReplace + value3
+        document.getElementById('add-money-3').innerText = newBalance
+        mainBalance = mainBalance - value3
+        document.getElementById('mainBalance').innerText = mainBalance
+        // add history 
+        const container = document.createElement('div')
+        container.className = 'border border-gray-700 mx-3 md:mx-10  mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
+        container.innerHTML=`
+        <h1 class='font-bold'> ${value3} Taka Famine 2024 is first for casualties in the fall </h1>
+        <p>Donation made on: ${formattedDate}</p>  
+        `
+        document.getElementById('history-list').append(container)
+        my_modal_3.showModal()
+        }else{  
+            alert("invalid Donation Amout")  
+        }
+        
+   
 })
 // History section
 const historyTab = document.getElementById('history')
