@@ -91,6 +91,7 @@ const donateTab = document.getElementById('donation')
     // remove class
     donateTab.classList.remove('bg-btnclr')
     document.getElementById('indexContainer').classList.add('hidden')
+    document.getElementById('history-list').classList.remove('hidden')
 
 })
 donateTab.addEventListener('click',function(){
