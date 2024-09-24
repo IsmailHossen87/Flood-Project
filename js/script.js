@@ -7,13 +7,8 @@ function getInputFieldId(id){
   
 }
 let  mainBalance = parseFloat(document.getElementById('mainBalance').innerText)
-const currentDate = new Date();
-const formattedDate = currentDate.toLocaleDateString('en-BD', {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-});
+
+const formattedDate = new Date().toString();
 // when click button 1 
 document.getElementById('donate-btn1').addEventListener('click',function(){
    
