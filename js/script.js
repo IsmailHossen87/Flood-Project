@@ -18,6 +18,8 @@ document.getElementById('donate-btn1').addEventListener('click',function(){
         document.getElementById('add-money-1').innerText = newBalance
         mainBalance = mainBalance -value1
         document.getElementById('mainBalance').innerText = mainBalance
+
+        
         const container = document.createElement('div')
         container.className = 'mx-10 mt-5  p-3 shadow-[0_3px_10px_rgb(0,0,0,0.2)]  md:p-6  rounded-xl '
         container.innerHTML=`
